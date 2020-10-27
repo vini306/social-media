@@ -1,0 +1,11 @@
+version:  '3'
+services: 
+    soc_med_db:
+        image: mongo
+        restart: unless-stopped
+        ports:
+            - "27017:27017"
+        volumes:
+            - mongo_data:/var/lib/mongodb
+volumes:
+    mongo_data:
